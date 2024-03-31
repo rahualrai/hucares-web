@@ -151,7 +151,9 @@ export default function Home() {
               </div>
             ))}
           </div>
-        ) : (
+        ) : null}
+        {currentChat.length > 0 &&(
+
           <div className={styles.chatbubbles} id="chatbubbles">
             {currentChat.map((chat) => {
               if (chat.role == 'user') {
