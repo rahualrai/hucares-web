@@ -1,0 +1,330 @@
+.main {
+  height: 100vh;
+  display: flex;
+  background: url('/howard.jpeg');
+  width: 100%;
+  position: relative;
+  background-size: cover;
+  opacity: 0.7;
+}
+.left {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  min-width: 350px;
+  background: rgba(42, 52, 66, 0.7);
+  position: relative;
+}
+.stickyDiv {
+  position: sticky;
+  bottom: 0;
+}
+.chats {
+  width: 90%;
+
+  overflow-y: scroll;
+  margin-left: auto;
+  margin-right: auto;
+}
+.chats button {
+  width: 100%;
+  height: 60px;
+  border: 1px solid #c3dff5;
+  outline: none;
+  background: none;
+  color: #c3dff5;
+  font-family: 'Manrope', sans-serif;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 10px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  border-radius: 3px;
+}
+
+.chat {
+  padding: 15px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.newChats {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.chats::-webkit-scrollbar {
+  display: none;
+}
+.chat:hover {
+  background: #0f355c;
+  cursor: pointer;
+}
+.chats h3 {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.right {
+  width: 100%;
+  position: relative;
+  background-size: cover;
+  @apply bg-transparent;
+}
+
+.bottomchat {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 50px;
+  width: 100%;
+}
+.bottomchatcontainer {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.bottomchatcontainer input {
+  width: calc(100% - 70px);
+  height: 70px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: 2px solid #c3dff5;
+  outline: none;
+  border-radius: 5px;
+  border-bottom-right-radius: 0px;
+  border-top-right-radius: 0px;
+  background: #051c349a;
+  font-family: 'Manrope', sans-serif;
+  font-size: 18px;
+  @apply rounded-lg font-medium text-white;
+}
+
+.bottomchatcontainer input::placeholder {
+  @apply text-white;
+}
+
+.bottomchatcontainer button {
+  width: 70px;
+  border: none;
+  height: 70px;
+  outline: none;
+  border: 2px solid #c3dff5;
+  border-radius: 5px;
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 0px;
+  background: #c3dff5;
+  color: #001834;
+  font-family: 'Manrope', sans-serif;
+  font-size: 18px;
+  cursor: pointer;
+  @apply rounded-xl;
+}
+
+.bottomchatcontainer button svg {
+  font-size: 32px;
+  color: #001834;
+}
+
+.faq {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+
+  width: 80%;
+  max-width: 700px;
+  margin: 0 auto;
+
+  border-radius: 5px;
+  @apply -translate-x-20 translate-y-96 mt-72;
+}
+
+.faqItem {
+  background: rgba(2, 26, 63, 0.7);
+  padding: 10px;
+  position: relative;
+  @apply rounded-lg;
+}
+
+.faqItem:hover {
+  background: rgba(33, 50, 76, 0.9);
+  cursor: pointer;
+}
+.faqItem p {
+  font-size: 18px;
+  @apply text-white;
+}
+
+.faqItem h5 {
+  color: #c3dff5;
+  font-size: 12px;
+}
+
+.faqItem svg {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 24px;
+  color: #c3dff5;
+}
+
+.chatbubbles {
+  display: flex;
+  flex-direction: column;
+  padding: 100px;
+
+  overflow-y: scroll;
+  height: calc(100% - 150px);
+  scrollbar-width: none;
+}
+
+.chatbubbles * {
+  overflow-anchor: none;
+}
+
+.chatbubbles::-webkit-scrollbar {
+  display: none;
+}
+
+.userchat {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  align-self: flex-end;
+  text-align: right;
+  overflow-anchor: none;
+  width: 80%;
+  max-width: 600px;
+}
+
+.userchat p,
+.botchat p,
+.markdown {
+  background: rgba(15, 53, 92, 0.5);
+  color: white;
+  padding: 20px;
+  display: block;
+  border-radius: 5px;
+  font-family: 'Manrope', sans-serif;
+  margin-bottom: 10px;
+  line-height: 1.5;
+  width: fit-content;
+}
+
+.markdown li {
+  list-style: number;
+  margin-left: 50px;
+}
+.markdown a {
+  color: #c3dff5;
+}
+#anchor {
+  height: 1px;
+  overflow-anchor: auto;
+}
+.userchat h5 {
+  color: #c3dff5;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.botchat {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: flex-start;
+  text-align: left;
+  width: 55%;
+  overflow-anchor: none;
+}
+.botchattitle {
+  display: flex;
+  align-items: center;
+  color: #c3dff5;
+  font-size: 14px;
+}
+.botchattitle h5 {
+  font-size: 14px;
+}
+.botchattitle img {
+  width: 40px;
+
+  margin-right: 10px;
+}
+@media (max-width: 1000px) {
+  .faq {
+    width: 80%;
+    grid-template-columns: 1fr;
+    margin-top: 40px;
+  }
+  .main {
+    flex-direction: column;
+  }
+  .left {
+    width: 100%;
+    padding: 30px;
+    flex-direction: row;
+    align-items: center;
+  }
+  .left h1 {
+    width: 100%;
+    font-size: 24px;
+  }
+  .left h6 {
+    display: none;
+  }
+  .chat {
+    display: none;
+  }
+  .chats h3 {
+    display: none;
+  }
+  .chats button {
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    width: fit-content;
+  }
+  .right {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+  }
+  .chats button p {
+    margin-right: 10px;
+  }
+  .left img {
+    width: 50px;
+    margin-top: 0;
+  }
+
+  .bottomchat {
+    padding: 20px;
+  }
+  .bottomchatcontainer {
+    max-width: 100%;
+  }
+  .bottomchatcontainer input {
+    width: calc(100% - 50px);
+  }
+  .bottomchatcontainer button {
+    width: 50px;
+  }
+  .chatbubbles {
+    padding: 20px;
+  }
+  .userchat p,
+  .botchat p,
+  .markdown {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
